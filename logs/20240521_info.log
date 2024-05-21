@@ -1,0 +1,185 @@
+[INFO]14:53:34:292-logsMethod.py:51 >> Class Name:CreateCalendarHandle
+[INFO]14:53:34:312-logsMethod.py:52 >> Method Name:testCase01_limit
+[INFO]14:53:34:331-logsMethod.py:53 >> Test Description:新建日历便签内容主流程 
+[STEP]14:53:34:353-test_handle.py:32 >> 前置新建日历便签主体
+[INFO]14:53:34:375-apiRe.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/noteinfo
+[INFO]14:53:34:394-apiRe.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]14:53:34:415-apiRe.py:34 >> 【requests】body:{'noteId': '1716274414355_noteId', 'star': 0, 'remindTime': 1714708259, 'remindType': 1}
+[INFO]14:53:34:539-apiRe.py:40 >> 【response】code:200
+[INFO]14:53:34:596-apiRe.py:41 >> 【response】body:{"responseTime":32,"infoVersion":1,"infoUpdateTime":1716274415240}
+[STEP]14:53:34:616-test_handle.py:42 >> 新建日历便签内容
+[INFO]14:53:34:636-apiRe.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/notecontent
+[INFO]14:53:34:656-apiRe.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=djkfjjfkdjkf', 'X-User-Key': '1204284213'}
+[INFO]14:53:34:675-apiRe.py:34 >> 【requests】body:{'noteId': '1716274414355_noteId', 'title': 'test', 'summary': 'test', 'body': 'test', 'localContentVersion': 1, 'BodyType': 0}
+[INFO]14:53:34:889-apiRe.py:40 >> 【response】code:401
+[INFO]14:53:34:909-apiRe.py:41 >> 【response】body:{"errorCode":-2010,"errorMsg":""}
+[INFO]15:51:41:068-logsMethod.py:51 >> Class Name:CreateCalendarMajor
+[INFO]15:51:41:079-logsMethod.py:52 >> Method Name:testCase01_major
+[INFO]15:51:41:090-logsMethod.py:53 >> Test Description:新建日历便签内容主流程 
+[STEP]15:51:41:101-test_major.py:24 >> 前置新建日历便签主体
+[INFO]15:51:41:113-apiRe.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/noteinfo
+[INFO]15:51:41:124-apiRe.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]15:51:41:136-apiRe.py:34 >> 【requests】body:{'noteId': '1716277901103_noteId', 'star': 0, 'remindTime': 1714708259, 'remindType': 1}
+[INFO]15:51:42:279-apiRe.py:40 >> 【response】code:200
+[INFO]15:51:42:290-apiRe.py:41 >> 【response】body:{"responseTime":43,"infoVersion":1,"infoUpdateTime":1716277902948}
+[STEP]15:51:42:301-test_major.py:38 >> 新建日历便签内容
+[INFO]15:51:42:314-apiRe.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/notecontent
+[INFO]15:51:42:325-apiRe.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]15:51:42:336-apiRe.py:34 >> 【requests】body:{'noteId': '1716277901103_noteId', 'title': 'test', 'summary': 'test', 'body': 'test', 'localContentVersion': 1, 'BodyType': 0}
+[INFO]15:51:43:089-apiRe.py:40 >> 【response】code:200
+[INFO]15:51:43:098-apiRe.py:41 >> 【response】body:{"responseTime":38,"contentVersion":1,"contentUpdateTime":1716277903732}
+[INFO]15:51:45:231-logsMethod.py:51 >> Class Name:GetCalendarMajor
+[INFO]15:51:45:239-logsMethod.py:52 >> Method Name:testCase01_major
+[INFO]15:51:45:248-logsMethod.py:53 >> Test Description:查看日历下便签主流程 
+[STEP]15:51:45:258-test_major.py:23 >> 前置构建一条日历便签
+[STEP]15:51:47:744-test_major.py:25 >> 查看日历下便签
+[INFO]15:51:47:755-apiRe.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/web/getnotes/remind
+[INFO]15:51:47:765-apiRe.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]15:51:47:775-apiRe.py:34 >> 【requests】body:{'remindStartTime': 1714535459, 'remindEndTime': 1714967459, 'startIndex': 0, 'rows': 10}
+[INFO]15:51:49:654-apiRe.py:40 >> 【response】code:200
+[INFO]15:51:49:664-apiRe.py:41 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716203766910_noteId","createTime":1716203767101,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716203767101,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716203767154},{"noteId":"1716025044469_noteId","createTime":1716025044625,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716025044625,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716025044696},{"noteId":"1716025045076_noteId","createTime":1716025045198,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716025045198,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716025045317},{"noteId":"1716025045674_noteId","createTime":1716025045838,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716025045838,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716025045921},{"noteId":"1716025046358_noteId","createTime":1716025046496,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716025046496,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716025046594},{"noteId":"1716203403850_noteId","createTime":1716203404076,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716203404076,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716203404217},{"noteId":"1716203473655_noteId","createTime":1716203473843,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716203473843,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716203473906},{"noteId":"1716203594605_noteId","createTime":1716203594833,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716203594833,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716203594898},{"noteId":"1716203617258_noteId","createTime":1716203617434,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716203617434,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716203617534},{"noteId":"1716203674878_noteId","createTime":1716203675051,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716203675051,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716203675130}]}
+[INFO]15:51:53:670-logsMethod.py:51 >> Class Name:CreateNoteMajor
+[INFO]15:51:53:677-logsMethod.py:52 >> Method Name:testCase01_major
+[INFO]15:51:53:684-logsMethod.py:53 >> Test Description:新建便签内容主流程 
+[STEP]15:51:53:693-test_major.py:28 >> 前置新建便签主体
+[INFO]15:51:53:701-apiRe.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/noteinfo
+[INFO]15:51:53:710-apiRe.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]15:51:53:720-apiRe.py:34 >> 【requests】body:{'noteId': '1716277913694_noteId'}
+[INFO]15:51:54:859-apiRe.py:40 >> 【response】code:200
+[INFO]15:51:54:869-apiRe.py:41 >> 【response】body:{"responseTime":45,"infoVersion":1,"infoUpdateTime":1716277915525}
+[STEP]15:51:54:878-test_major.py:38 >> 新建便签内容
+[INFO]15:51:54:888-apiRe.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/notecontent
+[INFO]15:51:54:898-apiRe.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]15:51:54:908-apiRe.py:34 >> 【requests】body:{'noteId': '1716277913694_noteId', 'title': 'test', 'summary': 'test', 'body': 'test', 'localContentVersion': 1, 'BodyType': 0}
+[INFO]15:52:05:302-logsMethod.py:51 >> Class Name:GetNoteContentMajor
+[INFO]15:52:05:311-logsMethod.py:52 >> Method Name:testCase01_major
+[INFO]15:52:05:320-logsMethod.py:53 >> Test Description:获取便签内容，主流程 
+[STEP]15:52:05:330-test_major.py:26 >> 前置构建一条便签数据
+[STEP]15:52:10:649-test_major.py:33 >> 前置获取用户下的所有便签数据
+[INFO]15:52:10:659-apiRe.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/99/notes
+[INFO]15:52:10:669-apiRe.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]15:52:12:490-apiRe.py:19 >> 【response】code:200
+[INFO]15:52:12:500-apiRe.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716277925331_noteId","createTime":1716277926788,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716277926788,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716277931307}]}
+[STEP]15:52:12:510-test_major.py:40 >> 获取用户下的所有便签内容
+[INFO]15:52:12:519-apiRe.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/get/notebody
+[INFO]15:52:12:528-apiRe.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]15:52:12:538-apiRe.py:34 >> 【requests】body:{'noteIds': ['1716277925331_noteId']}
+[INFO]15:52:13:649-apiRe.py:40 >> 【response】code:200
+[INFO]15:52:13:659-apiRe.py:41 >> 【response】body:{"responseTime":25,"noteBodies":[{"summary":"test","noteId":"1716277925331_noteId","infoNoteId":"1716277925331_noteId","bodyType":0,"body":"test","contentVersion":1,"contentUpdateTime":1716277931307,"title":"test","valid":1}]}
+[INFO]16:02:08:845-logsMethod.py:51 >> Class Name:CreateCalendarMajor
+[INFO]16:02:08:854-logsMethod.py:52 >> Method Name:testCase01_major
+[INFO]16:02:08:863-logsMethod.py:53 >> Test Description:新建日历便签内容主流程 
+[STEP]16:02:08:872-test_major.py:24 >> 前置新建日历便签主体
+[INFO]16:02:08:883-apiRe.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/noteinfo
+[INFO]16:02:08:893-apiRe.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]16:02:08:903-apiRe.py:34 >> 【requests】body:{'noteId': '1716278528874_noteId', 'star': 0, 'remindTime': 1714708259, 'remindType': 1}
+[INFO]16:02:09:934-apiRe.py:40 >> 【response】code:200
+[INFO]16:02:09:943-apiRe.py:41 >> 【response】body:{"responseTime":39,"infoVersion":1,"infoUpdateTime":1716278530482}
+[STEP]16:02:09:953-test_major.py:38 >> 新建日历便签内容
+[INFO]16:02:09:965-apiRe.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/notecontent
+[INFO]16:02:09:975-apiRe.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]16:02:09:985-apiRe.py:34 >> 【requests】body:{'noteId': '1716278528874_noteId', 'title': 'test', 'summary': 'test', 'body': 'test', 'localContentVersion': 1, 'BodyType': 0}
+[INFO]16:02:12:572-apiRe.py:40 >> 【response】code:200
+[INFO]16:02:12:581-apiRe.py:41 >> 【response】body:{"responseTime":35,"contentVersion":1,"contentUpdateTime":1716278533118}
+[INFO]16:02:17:482-logsMethod.py:51 >> Class Name:GetCalendarMajor
+[INFO]16:02:17:491-logsMethod.py:52 >> Method Name:testCase01_major
+[INFO]16:02:17:500-logsMethod.py:53 >> Test Description:查看日历下便签主流程 
+[STEP]16:02:17:511-test_major.py:23 >> 前置构建一条日历便签
+[INFO]16:02:24:819-logsMethod.py:51 >> Class Name:CreateNoteMajor
+[INFO]16:02:24:828-logsMethod.py:52 >> Method Name:testCase01_major
+[INFO]16:02:24:836-logsMethod.py:53 >> Test Description:新建便签内容主流程 
+[STEP]16:02:24:846-test_major.py:28 >> 前置新建便签主体
+[INFO]16:02:24:855-apiRe.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/noteinfo
+[INFO]16:02:24:865-apiRe.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]16:02:24:875-apiRe.py:34 >> 【requests】body:{'noteId': '1716278544847_noteId'}
+[INFO]16:02:25:894-apiRe.py:40 >> 【response】code:200
+[INFO]16:02:25:902-apiRe.py:41 >> 【response】body:{"responseTime":39,"infoVersion":1,"infoUpdateTime":1716278546439}
+[STEP]16:02:25:910-test_major.py:38 >> 新建便签内容
+[INFO]16:02:25:919-apiRe.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/notecontent
+[INFO]16:02:25:928-apiRe.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]16:02:25:936-apiRe.py:34 >> 【requests】body:{'noteId': '1716278544847_noteId', 'title': 'test', 'summary': 'test', 'body': 'test', 'localContentVersion': 1, 'BodyType': 0}
+[INFO]16:02:26:982-apiRe.py:40 >> 【response】code:200
+[INFO]16:02:26:992-apiRe.py:41 >> 【response】body:{"responseTime":39,"contentVersion":1,"contentUpdateTime":1716278547525}
+[INFO]16:02:35:003-logsMethod.py:51 >> Class Name:GetNoteContentMajor
+[INFO]16:02:35:010-logsMethod.py:52 >> Method Name:testCase01_major
+[INFO]16:02:35:019-logsMethod.py:53 >> Test Description:获取便签内容，主流程 
+[STEP]16:02:35:029-test_major.py:26 >> 前置构建一条便签数据
+[STEP]16:02:41:828-test_major.py:33 >> 前置获取用户下的所有便签数据
+[INFO]16:02:41:838-apiRe.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/99/notes
+[INFO]16:02:41:849-apiRe.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]16:02:43:794-apiRe.py:19 >> 【response】code:200
+[INFO]16:02:43:803-apiRe.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716278555030_noteId","createTime":1716278556530,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716278556530,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716278562362}]}
+[STEP]16:02:43:812-test_major.py:40 >> 获取用户下的所有便签内容
+[INFO]16:02:43:821-apiRe.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/get/notebody
+[INFO]16:02:43:830-apiRe.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]16:02:43:840-apiRe.py:34 >> 【requests】body:{'noteIds': ['1716278555030_noteId']}
+[INFO]16:02:48:201-apiRe.py:40 >> 【response】code:200
+[INFO]16:02:48:211-apiRe.py:41 >> 【response】body:{"responseTime":20,"noteBodies":[{"summary":"test","noteId":"1716278555030_noteId","infoNoteId":"1716278555030_noteId","bodyType":0,"body":"test","contentVersion":1,"contentUpdateTime":1716278562362,"title":"test","valid":1}]}
+[INFO]16:02:58:068-logsMethod.py:51 >> Class Name:GetNotePageMajor
+[INFO]16:02:58:078-logsMethod.py:52 >> Method Name:testCase01_major
+[INFO]16:02:58:087-logsMethod.py:53 >> Test Description:获取首页便签，主流程 
+[STEP]16:02:58:098-test_major.py:25 >> 前置构建一条便签数据
+[STEP]16:03:00:120-test_major.py:27 >> 获取首页便签
+[INFO]16:03:00:130-apiRe.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/99/notes
+[INFO]16:03:00:141-apiRe.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]16:03:03:140-apiRe.py:19 >> 【response】code:200
+[INFO]16:03:03:149-apiRe.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716278578099_noteId","createTime":1716278579650,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716278579650,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716278580655}]}
+[INFO]16:04:12:737-logsMethod.py:51 >> Class Name:CreateCalendarMajor
+[INFO]16:04:12:745-logsMethod.py:52 >> Method Name:testCase01_major
+[INFO]16:04:12:754-logsMethod.py:53 >> Test Description:新建日历便签内容主流程 
+[STEP]16:04:12:763-test_major.py:24 >> 前置新建日历便签主体
+[INFO]16:04:12:774-apiRe.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/noteinfo
+[INFO]16:04:12:783-apiRe.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]16:04:12:792-apiRe.py:34 >> 【requests】body:{'noteId': '1716278652765_noteId', 'star': 0, 'remindTime': 1714708259, 'remindType': 1}
+[INFO]16:04:13:840-apiRe.py:40 >> 【response】code:200
+[INFO]16:04:13:849-apiRe.py:41 >> 【response】body:{"responseTime":34,"infoVersion":1,"infoUpdateTime":1716278654378}
+[STEP]16:04:13:859-test_major.py:38 >> 新建日历便签内容
+[INFO]16:04:13:868-apiRe.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/notecontent
+[INFO]16:04:13:877-apiRe.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]16:04:13:885-apiRe.py:34 >> 【requests】body:{'noteId': '1716278652765_noteId', 'title': 'test', 'summary': 'test', 'body': 'test', 'localContentVersion': 1, 'BodyType': 0}
+[INFO]16:04:16:593-apiRe.py:40 >> 【response】code:200
+[INFO]16:04:16:602-apiRe.py:41 >> 【response】body:{"responseTime":28,"contentVersion":1,"contentUpdateTime":1716278657150}
+[INFO]16:04:20:319-logsMethod.py:51 >> Class Name:GetCalendarMajor
+[INFO]16:04:20:328-logsMethod.py:52 >> Method Name:testCase01_major
+[INFO]16:04:20:337-logsMethod.py:53 >> Test Description:查看日历下便签主流程 
+[STEP]16:04:20:347-test_major.py:23 >> 前置构建一条日历便签
+[STEP]16:04:22:507-test_major.py:25 >> 查看日历下便签
+[INFO]16:04:22:517-apiRe.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/web/getnotes/remind
+[INFO]16:04:22:526-apiRe.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]16:04:22:535-apiRe.py:34 >> 【requests】body:{'remindStartTime': 1714535459, 'remindEndTime': 1714967459, 'startIndex': 0, 'rows': 10}
+[INFO]16:04:23:575-apiRe.py:40 >> 【response】code:200
+[INFO]16:04:23:584-apiRe.py:41 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716203849270_noteId","createTime":1716203849502,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716203849502,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716203849566},{"noteId":"1716025045674_noteId","createTime":1716025045838,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716025045838,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716025045921},{"noteId":"1716025046358_noteId","createTime":1716025046496,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716025046496,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716025046594},{"noteId":"1716203403850_noteId","createTime":1716203404076,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716203404076,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716203404217},{"noteId":"1716203473655_noteId","createTime":1716203473843,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716203473843,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716203473906},{"noteId":"1716203594605_noteId","createTime":1716203594833,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716203594833,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716203594898},{"noteId":"1716203617258_noteId","createTime":1716203617434,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716203617434,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716203617534},{"noteId":"1716203674878_noteId","createTime":1716203675051,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716203675051,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716203675130},{"noteId":"1716203766910_noteId","createTime":1716203767101,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716203767101,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716203767154},{"noteId":"1716203823826_noteId","createTime":1716203824016,"star":0,"remindTime":1714708259,"remindType":1,"infoVersion":1,"infoUpdateTime":1716203824016,"groupId":null,"title":"test2","summary":"test2","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716203824114}]}
+[INFO]16:04:26:053-logsMethod.py:51 >> Class Name:CreateNoteMajor
+[INFO]16:04:26:061-logsMethod.py:52 >> Method Name:testCase01_major
+[INFO]16:04:26:069-logsMethod.py:53 >> Test Description:新建便签内容主流程 
+[STEP]16:04:26:079-test_major.py:28 >> 前置新建便签主体
+[INFO]16:04:26:088-apiRe.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/noteinfo
+[INFO]16:04:26:097-apiRe.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]16:04:26:107-apiRe.py:34 >> 【requests】body:{'noteId': '1716278666080_noteId'}
+[INFO]16:04:27:420-apiRe.py:40 >> 【response】code:200
+[INFO]16:04:27:430-apiRe.py:41 >> 【response】body:{"responseTime":30,"infoVersion":1,"infoUpdateTime":1716278667975}
+[STEP]16:04:27:438-test_major.py:38 >> 新建便签内容
+[INFO]16:04:27:448-apiRe.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/set/notecontent
+[INFO]16:04:27:458-apiRe.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]16:04:27:468-apiRe.py:34 >> 【requests】body:{'noteId': '1716278666080_noteId', 'title': 'test', 'summary': 'test', 'body': 'test', 'localContentVersion': 1, 'BodyType': 0}
+[INFO]16:04:28:381-apiRe.py:40 >> 【response】code:200
+[INFO]16:04:28:389-apiRe.py:41 >> 【response】body:{"responseTime":36,"contentVersion":1,"contentUpdateTime":1716278668945}
+[INFO]16:04:36:520-logsMethod.py:51 >> Class Name:GetNoteContentMajor
+[INFO]16:04:36:528-logsMethod.py:52 >> Method Name:testCase01_major
+[INFO]16:04:36:536-logsMethod.py:53 >> Test Description:获取便签内容，主流程 
+[STEP]16:04:36:545-test_major.py:26 >> 前置构建一条便签数据
+[STEP]16:04:40:087-test_major.py:33 >> 前置获取用户下的所有便签数据
+[INFO]16:04:40:096-apiRe.py:12 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/user/1204284210/home/startindex/0/rows/99/notes
+[INFO]16:04:40:105-apiRe.py:13 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]16:04:41:138-apiRe.py:19 >> 【response】code:200
+[INFO]16:04:41:147-apiRe.py:20 >> 【response】body:{"responseTime":0,"webNotes":[{"noteId":"1716278676546_noteId","createTime":1716278678670,"star":0,"remindTime":0,"remindType":0,"infoVersion":1,"infoUpdateTime":1716278678670,"groupId":null,"title":"test","summary":"test","thumbnail":null,"contentVersion":1,"contentUpdateTime":1716278680648}]}
+[STEP]16:04:41:157-test_major.py:40 >> 获取用户下的所有便签内容
+[INFO]16:04:41:167-apiRe.py:28 >> 【requests】url:http://note-api.wps.cn/v3/notesvr/get/notebody
+[INFO]16:04:41:176-apiRe.py:29 >> 【requests】headers:{'Cookie': 'wps_sid=V02SFLtaOm49yJ7ysbuCQQGqzAT0nzI00abb82410047c7eb32', 'X-User-Key': '1204284210'}
+[INFO]16:04:41:186-apiRe.py:34 >> 【requests】body:{'noteIds': ['1716278676546_noteId']}
+[INFO]16:04:42:139-apiRe.py:40 >> 【response】code:200
+[INFO]16:04:42:148-apiRe.py:41 >> 【response】body:{"responseTime":45,"noteBodies":[{"summary":"test","noteId":"1716278676546_noteId","infoNoteId":"1716278676546_noteId","bodyType":0,"body":"test","contentVersion":1,"contentUpdateTime":1716278680648,"title":"test","valid":1}]}
+[INFO]16:04:45:129-logsMethod.py:51 >> Class Name:GetNotePageMajor
+[INFO]16:04:45:138-logsMethod.py:52 >> Method Name:testCase01_major
+[INFO]16:04:45:146-logsMethod.py:53 >> Test Description:获取首页便签，主流程 
+[STEP]16:04:45:155-test_major.py:25 >> 前置构建一条便签数据
