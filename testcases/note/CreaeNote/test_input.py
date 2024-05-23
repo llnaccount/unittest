@@ -1,7 +1,7 @@
 import time
 import unittest
-from common.yamlRead import YamlRead
 from parameterized import parameterized
+from common.yamlRead import YamlRead
 from business.apiRe import get, post
 from business.dataClear import DataClear
 from business.CheckOutput import CheckOutput

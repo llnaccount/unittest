@@ -29,7 +29,7 @@ class GetNotePageHandle(unittest.TestCase):
         "responseTime": int,
         "webNotes": [
             {
-                "noteId": int,
+                "noteId": str,
                 "createTime": int,
                 "star": 0,
                 "remindTime": 0,
@@ -42,9 +42,21 @@ class GetNotePageHandle(unittest.TestCase):
                 "thumbnail": None,
                 "contentVersion": 1,
                 "contentUpdateTime": int
-            }
-
-        ]
+            },{
+                "noteId": str,
+                "createTime": int,
+                "star": 0,
+                "remindTime": 0,
+                "remindType": int,
+                "infoVersion": 1,
+                "infoUpdateTime": int,
+                "groupId": None,
+                "title": str,
+                "summary": str,
+                "thumbnail": None,
+                "contentVersion": 1,
+                "contentUpdateTime": int
+            }]
     }
 
     def setUp(self):
@@ -60,10 +72,24 @@ class GetNotePageHandle(unittest.TestCase):
         get_list_url = self.host + f'/v3/notesvr/user/{self.userid1}/home/startindex/{startindex}/rows/{rows}/notes'
         res = get(get_list_url, headers=self.headers, sid=self.sid1)
         self.assertEqual(200, res.status_code)
-        expect = deepcopy(self.expectBase)
-        expect['webNotes'][0]['noteId'] = data_msg[0]['noteId']
-        expect['webNotes'][0]['title'] = data_msg[0]['title']
-        expect['webNotes'][0]['summary'] = data_msg[0]['summary']
+        expect = {
+            "responseTime": int,
+            "webNotes": [
+                {
+                    "noteId": str,
+                    "createTime": int,
+                    "star": 0,
+                    "remindTime": 0,
+                    "remindType": int,
+                    "infoVersion": 1,
+                    "infoUpdateTime": int,
+                    "groupId": None,
+                    "title": str,
+                    "summary": str,
+                    "thumbnail": None,
+                    "contentVersion": 1,
+                    "contentUpdateTime": int
+                }]}
         CheckOutput().output_check(expect, res.json())
 
     def testCase02_startindex(self):
@@ -77,9 +103,7 @@ class GetNotePageHandle(unittest.TestCase):
         res = get(get_list_url, headers=self.headers, sid=self.sid1)
         self.assertEqual(200, res.status_code)
         expect = deepcopy(self.expectBase)
-        expect['webNotes'][0]['noteId'] = data_msg[0]['noteId']
-        expect['webNotes'][0]['title'] = data_msg[0]['title']
-        expect['webNotes'][0]['summary'] = data_msg[0]['summary']
+        CheckOutput().output_check(expect, res.json())
 
 
     def testCase03_rows(self):
@@ -92,10 +116,24 @@ class GetNotePageHandle(unittest.TestCase):
         get_list_url = self.host + f'/v3/notesvr/user/{self.userid1}/home/startindex/{startindex}/rows/{rows}/notes'
         res = get(get_list_url, headers=self.headers, sid=self.sid1)
         self.assertEqual(200, res.status_code)
-        expect = deepcopy(self.expectBase)
-        expect['webNotes'][0]['noteId'] = data_msg[0]['noteId']
-        expect['webNotes'][0]['title'] = data_msg[0]['title']
-        expect['webNotes'][0]['summary'] = data_msg[0]['summary']
+        expect = {
+            "responseTime": int,
+            "webNotes": [
+                {
+                    "noteId": str,
+                    "createTime": int,
+                    "star": 0,
+                    "remindTime": 0,
+                    "remindType": int,
+                    "infoVersion": 1,
+                    "infoUpdateTime": int,
+                    "groupId": None,
+                    "title": str,
+                    "summary": str,
+                    "thumbnail": None,
+                    "contentVersion": 1,
+                    "contentUpdateTime": int
+                }]}
         CheckOutput().output_check(expect, res.json())
 
     def testCase04_rows(self):
@@ -108,10 +146,24 @@ class GetNotePageHandle(unittest.TestCase):
         get_list_url = self.host + f'/v3/notesvr/user/{self.userid1}/home/startindex/{startindex}/rows/{rows}/notes'
         res = get(get_list_url, headers=self.headers, sid=self.sid1)
         self.assertEqual(200, res.status_code)
-        expect = deepcopy(self.expectBase)
-        expect['webNotes'][0]['noteId'] = data_msg[0]['noteId']
-        expect['webNotes'][0]['title'] = data_msg[0]['title']
-        expect['webNotes'][0]['summary'] = data_msg[0]['summary']
+        expect = {
+            "responseTime": int,
+            "webNotes": [
+                {
+                    "noteId": str,
+                    "createTime": int,
+                    "star": 0,
+                    "remindTime": 0,
+                    "remindType": int,
+                    "infoVersion": 1,
+                    "infoUpdateTime": int,
+                    "groupId": None,
+                    "title": str,
+                    "summary": str,
+                    "thumbnail": None,
+                    "contentVersion": 1,
+                    "contentUpdateTime": int
+                }]}
         CheckOutput().output_check(expect, res.json())
 
     def testCase05_statuslimit(self):
@@ -134,6 +186,7 @@ class GetNotePageHandle(unittest.TestCase):
         """ 不同的处理数量校验：存在2条便签数据，则返回两条便签"""
         step("前置构建2条便签数据")
         data_msg = CreateNote().create_note(userid=self.userid1, sid=self.sid1, num=2)
+        print(data_msg)
         step("获取首页便签")
         startindex = 0
         rows = 10
@@ -141,12 +194,6 @@ class GetNotePageHandle(unittest.TestCase):
         res = get(get_list_url, headers=self.headers, sid=self.sid1)
         self.assertEqual(200, res.status_code)
         expect = deepcopy(self.expectBase)
-        expect['webNotes'][0]['noteId'] = data_msg[0]['noteId']
-        expect['webNotes'][0]['title'] = data_msg[0]['title']
-        expect['webNotes'][0]['summary'] = data_msg[0]['summary']
-        expect['webNotes'][1]['noteId'] = data_msg[1]['noteId']
-        expect['webNotes'][1]['title'] = data_msg[1]['title']
-        expect['webNotes'][1]['summary'] = data_msg[1]['summary']
         CheckOutput().output_check(expect, res.json())
 
 

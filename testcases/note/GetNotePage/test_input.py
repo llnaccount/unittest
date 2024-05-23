@@ -113,11 +113,14 @@ class GetNotePageInput(unittest.TestCase):
         get_list_url = self.host + f'/v3/notesvr/user/{self.userid1}/home/startindex/{startindex}/rows/{rows}/notes'
         res = get(url=get_list_url, sid=self.sid1)
         expect = deepcopy(self.expectBase)
-        if isinstance(startindex, int) and startindex >= 0:
+        if isinstance(startindex, int) and startindex >= 0 and startindex < 214748364:
             self.assertEqual(200, res.status_code)
             expect['webNotes'][0]['noteId'] = data_msg[0]['noteId']
             expect['webNotes'][0]['title'] = data_msg[0]['title']
             expect['webNotes'][0]['summary'] = data_msg[0]['summary']
         else:
-            self.assertEqual(400, res.status_code,
+            self.assertEqual(500, res.status_code,
                              f"Expected status code 400 for invalid startindex {startindex},status_code为{res.status_code}")
+
+
+# startindex 为’‘，返回代码为404

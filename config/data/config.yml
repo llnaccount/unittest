@@ -29,7 +29,7 @@ deleteNote:
 
 getNotePage:
   mustKeys:
-    - startindex: [99999999999999999999,0,-1,2147483648,-2147483649,1.555,"1",""]
+    - startindex: [99999999999999999999,0,-1,2147483648,-2147483649,1.555,"1",'']
   notMustKeys:
   bodyBase: {}
   exceptBase: {}
