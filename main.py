@@ -1,6 +1,6 @@
 import unittest
 import os
-from BeautifulReport import BeautifulReport
+# from BeautifulReport import BeautifulReport
 
 DIR = os.path.dirname(os.path.abspath(__file__))
 ENVIRON = 'Online'  # 'Online' -> 线上环境， ‘Offline’-> 测试环境
@@ -14,6 +14,6 @@ if __name__ == '__main__':
     else:
         run_pattern = run_pattern + '.py'
     suite = unittest.defaultTestLoader.discover(start_dir='./testcases', pattern=pattern)
-    # unittest.TextTestRunner().run(suite)
-    result = BeautifulReport(suite)
-    result.report(filename='report.html', description='测试报告', report_dir='./')
+    unittest.TextTestRunner().run(suite)
+    # result = BeautifulReport(suite)
+    # result.report(filename='report.html', description='测试报告', report_dir='./')
